@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKO-NZ-iHP">
+                                <rect key="frame" x="20" y="90" width="335" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="WL0-K7-n4M"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dropDownButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1z-Ev-bFl"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nGh-jg-vIt">
+                                <rect key="frame" x="20" y="125" width="335" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="JSD-4P-hKh"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="OHk-qQ-Gfs">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OHk-qQ-Gfs" id="5nf-oF-NOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kmr-rm-Rje"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hlY-Eb-Y4o"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="customPopViewDownArrow" translatesAutoresizingMaskIntoConstraints="NO" id="LLO-Fi-iZT">
+                                <rect key="frame" x="320" y="97.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="gvZ-Db-E1y"/>
+                                    <constraint firstAttribute="width" constant="20" id="vQw-1S-9LQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SKO-NZ-iHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CZq-Q0-HXV"/>
+                            <constraint firstItem="LLO-Fi-iZT" firstAttribute="centerY" secondItem="SKO-NZ-iHP" secondAttribute="centerY" id="GRJ-e6-veI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SKO-NZ-iHP" secondAttribute="trailing" constant="20" id="UJx-qc-Fdo"/>
+                            <constraint firstItem="nGh-jg-vIt" firstAttribute="leading" secondItem="SKO-NZ-iHP" secondAttribute="leading" id="WyD-M0-rtz"/>
+                            <constraint firstItem="SKO-NZ-iHP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="mxt-xk-Q1u"/>
+                            <constraint firstItem="LLO-Fi-iZT" firstAttribute="trailing" secondItem="SKO-NZ-iHP" secondAttribute="trailing" constant="-15" id="qcc-J7-SPE"/>
+                            <constraint firstItem="nGh-jg-vIt" firstAttribute="top" secondItem="SKO-NZ-iHP" secondAttribute="bottom" id="wHb-cG-lz2"/>
+                            <constraint firstItem="nGh-jg-vIt" firstAttribute="width" secondItem="SKO-NZ-iHP" secondAttribute="width" id="wkO-Dj-DZM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dropDownArrowImageView" destination="LLO-Fi-iZT" id="PMd-QO-zAq"/>
+                        <outlet property="dropDownButton" destination="SKO-NZ-iHP" id="15v-Kt-IYX"/>
+                        <outlet property="dropDownList" destination="nGh-jg-vIt" id="USD-Jp-5Vi"/>
+                        <outlet property="dropDownListHeightConstraint" destination="JSD-4P-hKh" id="aET-UA-ok5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="customPopViewDownArrow" width="37" height="19"/>
+    </resources>
+</document>
